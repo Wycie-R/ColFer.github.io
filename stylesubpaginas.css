@@ -1,0 +1,1248 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-padding: 80px;
+}
+
+/* BARRA DE NAVEGACION */
+.header {
+  height: 100vh;
+  user-select: none;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 3%;
+  position: fixed;
+  transition: all .6s;
+  z-index: 60;
+}
+
+.nav-backg {
+  background-color: #9d2424;
+  padding: 15px 2%;
+}
+
+.nav-logoimg img {
+  width: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.nav-logoimg img:hover {
+  transform: scale(1.2);
+}
+
+.nav-links {
+  list-style: none;
+  font-family: cursive;
+}
+
+.nav .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+  transition: transform 0.5s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.nav .nav-links li:hover {
+  transform: scale(1.1);
+  border-bottom: 2px solid #fff;
+}
+
+.nav-boton {
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px 10px 10px 10px;
+  display: none;
+}
+
+.boton-item {
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  background-color: #f00;
+}
+
+.boton-item:nth-child(1) {
+  margin-top: 4px;
+}
+
+
+.nav-contacto {
+  width: 120px;
+  height: 35px;
+  border-radius: 20px 20px 20px 20px;    
+  background-color: #FF0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 88vh;
+  left: 85%;
+  cursor: pointer;
+}
+
+.nav-contacto span {
+  text-decoration: none;
+  font-size: .8rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.nav-contacto:hover {
+  background-color: #ff8a80;
+}
+
+.nav-contacto:hover > a {
+  color: #000;
+}
+/* MENU PARA TABLET Y TELEFONO */
+
+.nav_menu {
+  width: 50%;
+  height: 100%;
+  background-color: #9d2424;
+  position: fixed;
+  display: none;
+}
+
+.nav_menuCortina {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0%;
+  z-index: -10;
+  display: none;
+}
+
+.menu-links {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  font-family: cursive;    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-links li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* FONDO Y TITULO */
+.container-fondo {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: -10;
+}
+
+.contain-cortina {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  background-image: url(images/imagenT.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cortina {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color:#00000078;
+}
+
+.container-fondo h1 {
+  text-align: right;
+  margin-left: 30px;
+  font-size: 50px;
+  hyphens: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-text-stroke: 2px rgb(175, 16, 16);
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+.container-fondo img {
+  width: 100%;
+  height: 100vh;
+  background-color: blueviolet;
+  position: absolute;
+  z-index: -2;
+}
+
+/* SECCION DEL FORUMALRIO DE GMAIL */
+.form_cortina {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  opacity: 70%;
+}
+
+.form_container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.form_back {
+  width: 25%;
+  height: 70%;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+}
+
+.form_formulario {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #9d2424;
+}
+
+.form_encabezado {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_formulario h2 {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.form_salir {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.form_barra {
+  width: 3px;
+  height: 25px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 2px;
+  border-radius: 2px;
+}
+
+.form_barra:nth-child(1) {
+  transform: rotate(130deg);
+}
+
+.form_barra:nth-child(2) {
+  transform: rotate(-130deg);
+}
+
+.form_formulario form {
+  margin-left: 20px;
+  padding: 30px;
+  padding-left: 0;
+}
+
+.form_input {
+  width: 100%;
+  padding: 7px;
+  margin: 6px 0;
+  border: none;
+  border-bottom: 3px solid #ccc;
+  background-color: transparent;
+  color: #fff;
+}
+
+.form_input:focus {
+  outline: none;
+  border-bottom: 3px solid #f00;
+}
+
+.form textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+.form_button {
+  width: 120px;
+  height: 35px;
+  border-radius: 20px 20px 20px 20px;    
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.form_button:hover {
+  background-color: #ff8a80;
+  color: #000;
+}
+
+.form_cortina {
+  display: none;
+}
+
+.form_container {
+  display: none;
+}
+
+.trueCortina {
+  display: block;
+}
+
+.trueForm {
+  display: flex;
+}
+
+/* SECCION DE LAS ESPECIALIDADES/BACHILLERATOS */
+.esp {
+  width: 100%;
+  min-height: 110vh;
+  background-color: #111;
+  user-select: none;
+}
+
+.esp-titulo {
+  padding: 10px;
+}
+
+.esp-titulo h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  display: inline;
+  margin-left: 100px;
+  color: #ff8a80;
+  letter-spacing: 1px;
+}
+
+.esp-container {
+  width: 100%;
+  height: 93%;
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ESTILO DEL BACHILLERATO TECNICO */
+.esp-tecnico {
+  width: 35%;
+  height: 85%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fcfcda;
+}
+
+.esp-tecnico-info {
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.esp-tecnico-icono {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.esp-tecnico-icono img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+
+.esp-tecnico p {
+  text-align: center;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+.esp-tecnico h3 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #700;
+}
+
+.esp-tecnico-boton {
+  background-color: #7396d4;
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.esp-tecnico-boton:hover {
+  background-color: #95b8f6;
+}
+
+/* ESTILO DEL CIENTIFICO */
+.esp-cientifico {
+  width: 35%;
+  height: 85%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fcfcda;
+}
+
+.esp-cientifico-info {
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.esp-cientifico-icono {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.esp-cientifico-icono img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.esp-cientifico p {
+  text-align: center;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+.esp-cientifico h3 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #700;
+}
+
+.esp-cientifico-boton {
+  background-color: #7396d4;
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.esp-cientifico-boton:hover {
+  background-color: #95b8f6;
+}
+
+/* SECCION DE LAS INSTALACIONES */
+.inst {
+  width: 100%;
+  min-height: 110vh;
+  background-color: #252323;
+  padding: 30px;
+}
+
+.inst_titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  display: inline;
+  margin-left: 100px;
+  color: #ff8a80;
+  letter-spacing: 2px;
+}
+
+.inst_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+
+.item {
+  max-width: 320px;
+  max-height: 324px;
+  margin: 30px 10px; 
+  border-radius: 10px 10px 10px 10px;
+ 
+}
+
+.item_img {
+  width: 100%;
+  height: 211px;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+}
+
+.item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.item_text h4 {
+  font-size: 25px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.item_text p {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+/* SECCION DE LOS EVENTOS */
+.eventos {
+  width: 100%;
+  min-height: 85vh;
+  background-color: #252323;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eventos_linea {
+  width: 95%;
+  border-top: 0.01px solid #ccc;
+}
+
+.eventos_container_titulo {
+  width: 100%;
+  padding: 30px;
+}
+
+.eventos_titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  display: inline;
+  margin-left: 100px;
+  color: #ff8a80;
+  letter-spacing: 2px;
+}
+
+.eventos_container {
+  width: 90%;
+  min-height: 583px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tarjet {
+  border: 1px solid #555;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjet h3 {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2;
+  font-weight: 600;
+}
+
+.tarjet span {
+  font-family: 'Montserrat', sans-serif;
+  color: #ff8a80;
+}
+
+.tarjet p {
+  font-family: 'Open Sans', sans-serif;
+  color: #aaa;
+}
+
+/* SECCION DE OLIMPIADAS */
+
+.eventos_olimpiadas {
+  height: 583px;
+}
+
+.olimpiadas_img {
+  width: 85%;
+  height: 60%;
+  margin-top: 10px;
+
+}
+
+.olimpiadas_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.olimpadas_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+
+/* SECCION DE MARCHA POR LA PAZ */
+
+.eventos_marchaPaz {
+  height: 525px;
+}
+
+.marchaPaz_img {
+  width: 85%;
+  height: 60%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.marchaPaz_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.marchaPaz_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+
+/* SECCION DE ELECCIONES */
+.eventos_elecciones {
+  height: 583px;
+}
+
+.elecciones_img {
+  margin-top: 10px;
+  width: 85%;
+  height: 60%;
+  border-radius: 5px;
+}
+
+.elecciones_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%
+}
+
+.elecciones_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+
+/* SECCION DE LAS PREGUNTAS FRECUENTES */
+
+.preguntas {
+  width: 100%;
+  min-height: 86.90vh;
+  background-color: #222;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preguntas_titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  color: #ff8a80;
+  margin-bottom: 40px;
+}
+
+.preguntas_acordeon {
+  width: 90%;
+  height: 85%;
+  border-radius: 32px;
+}
+
+.bloque {  
+  padding-right: 10px;
+  border-bottom: 1px solid #555;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  cursor: pointer;
+}
+
+.bloque.activo .bloque_respuesta {
+  height: 60px;
+}
+
+.bloque_text {
+  width: 100%;
+}
+
+.bloque_pregunta {
+  padding: 22px 0;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bloque_respuesta {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 18px;
+  transition: all .5s;
+}
+
+/* Sección FOOTER*/
+
+/* Estilo para el footer */
+.footer {
+  font-size: 20px;
+  background-color: black; /* Fondo negro */
+  font-family: Helvetica;
+  color: white; /* Letras blancas */
+  padding: 20px; /* Espaciado interno del footer */
+  display: flex; /* Flexbox para alinear los elementos */
+  justify-content:center; /* Alinear elementos a los extremos del footer */
+}
+
+/* Estilo para el elemento "Contacto" */
+.footer-contacto {
+  border: 2px outset #555;
+  order: 1; /* Orden en el que aparece en el flexbox (izquierda) */
+  padding: 10px;
+  margin-right: 30px;
+}
+
+/* Estilo para el elemento "Redes sociales" */
+.footer-redes-sociales {
+  order: 2; /* Orden en el que aparece en el flexbox (derecha) */
+  padding-left: 20px;
+  padding: 10px;
+  border: 2px inset #555;
+}
+
+/* Estilo para las listas en "Contacto" y "Redes sociales" */
+.footer-lista {
+  list-style-type: none; /* Eliminar estilos de lista predeterminados */
+  padding: 0; /* Eliminar espaciado interno de la lista */
+}
+
+.footer-lista li {
+  -webkit-text-stroke: 0.9px rgb(250, 250, 250);
+  color: transparent;
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+.footer-lista em {
+  -webkit-text-stroke: 0.7px rgb(255, 255, 255);
+  color: transparent;
+}
+
+.footer-lista li::before {
+  content: "\2022"; /* Añadir viñeta estilo bullet antes de cada elemento de la lista */
+  color: white; /* Color de la viñeta */
+  margin-right: 5px; /* Espaciado entre la viñeta y el texto del elemento de la lista */
+}
+
+
+/* SECCION RESPONSIVE O MODO CELULAR/TABLET */
+@media screen and (max-width: 900px) {
+
+  /* RESPONSIVE DE HEADER */
+  .container-fondo h1 {
+      font-size: 45px;
+  }
+
+  .contain-cortina {
+      background-image: url(images/imagenT.jpeg);
+  }
+
+  .navcontainer_links {
+      display: none;
+  }
+
+  .nav-boton {
+      display: flex;
+  }
+
+  .nav_menu {
+      display: flex;
+      transform: translateX(-100%);
+      transition: all .7s ease;
+      z-index: 1;
+  }
+
+  .despliegue {
+      transform: translateX(0);
+  }
+
+  .nav_menuCortina {
+      display: block;
+      transition: all .6s;
+  }
+
+  .CortinaActive{
+      opacity: 50%;
+      z-index: auto;
+  }
+
+  .nav-contacto {
+      left: 79.5%;
+  }
+
+  /* RESPONSIVE DE ESPECIALIDADES */
+  .esp {
+    min-height: 65vh;
+}
+
+.esp-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.esp-titulo h2 {
+    display: block;
+    text-align: center;
+    padding: 30px;
+    margin-left: 0;
+}
+
+/* tecnico */
+.esp-tecnico {
+    width: 80%;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.esp-tecnico-icono {
+    width: 40%;
+    height: 200px;
+    margin-left: 10px;
+}
+
+.esp-tecnico-icono img {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.esp-tecnico-info {
+    width: 60%;
+    padding: 1px;
+}
+
+/* cientifico */
+.esp-cientifico {
+    width: 80%;
+    flex-direction: row;
+}
+
+.esp-cientifico-icono {
+    width: 40%;
+    height: 200px;
+    margin-left: 10px;
+}
+
+.esp-cientifico-icono img {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.esp-cientifico-info {
+    width: 60%;
+    padding: 1px;
+}
+
+  /* RESPONSIVE DE INSTALACIONES */
+
+.inst_titulo {
+  display: block;
+  text-align: center;
+  margin-left: 0;
+}
+
+  /* RESPONSIVE DE EVENTOS*/
+  .eventos_titulo {
+    margin-left: 0;
+    display: block;
+    text-align: center;
+}
+
+.eventos_container {
+    flex-direction: column;
+}
+
+.tarjet {
+    width: 100%;
+    margin-bottom: 15px;
+    flex-direction: row;
+    height: 250px;
+}
+
+.marchaPaz_img {
+    margin-left: 10px;
+    width: 150%;
+    height: 80%;
+}
+
+
+.elecciones_img {
+    margin-left: 10px;
+    width: 150%;
+    height: 80%;
+}
+
+.olimpiadas_img {
+    margin-left: 10px;
+    width: 150%;
+    height: 80%;
+}
+
+/* preguntas frecuentes responsive */
+.preguntas {
+  min-height: 60.9vh;
+}
+
+.preguntas_acordeon {
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 600px) {
+
+  /* RESPONSIVE DE HEADER */
+      .header {
+          height: 50vh;
+      }
+
+      .contain-cortina {
+          background-image: url(images/imagenT.jpeg);
+      }
+
+      .container-fondo {
+          height: 50vh;
+      }
+
+      .container-fondo h1 {
+          font-size: 35px;
+      }
+
+      .nav_menu {
+          width: 60%;
+      }
+
+      .nav-contacto {
+          left: 74%;
+      }
+  /* ESPECIALIDADES RESPONSIVE */
+  .esp-titulo h2 {
+    font-size: 25px;
+}
+
+/* tecnico */
+.esp-tecnico {
+    flex-direction: column;
+    height: 500px;
+}
+
+.esp-tecnico-icono {
+    width: 85%;
+    height: 60%;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.esp-tecnico-info {
+    width: 90%;
+    padding: 0;
+}
+
+/* cientifico */ 
+.esp-cientifico {
+    flex-direction: column;
+    height: 500px;
+    margin-bottom: 40px;
+}
+
+.esp-cientifico-icono {
+    width: 85%;
+    height: 60%;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.esp-cientifico-info {
+    width: 90%;
+    padding: 0;
+}
+
+/* RESONSIVE DE INSTALACIONES */
+.inst_titulo {
+    font-size: 25px;
+}
+
+.item_text h4 {
+    font-size: 20px;
+}
+
+.item_text p {
+    font-size: 18px;
+}
+
+ /* EVENTOS RESPONSIVE */
+ .eventos_titulo {
+  font-size: 25px;
+}
+.tarjet {
+  flex-direction: column;
+  height: 500px;
+}
+
+.marchaPaz_img {
+  margin-left: 0;
+  width: 85%;
+  height: 60%;
+}
+
+
+.elecciones_img {
+  margin-left: 0;
+  width: 85%;
+  height: 60%;
+}
+
+.olimpiadas_img {
+  margin-left: 0;
+  width: 85%;
+  height: 60%;
+}
+  
+  /* PREGUNTAS FRECUENTES */
+  .preguntas_titulo {
+      font-size: 35px;
+      display: block;
+      text-align: center;
+      margin-bottom: 0;
+  }
+
+  .bloque_pregunta {
+      font-size: 19px;
+  }
+
+  .bloque_respuesta {
+      font-size: 16px;
+  }
+}
+
+
+
+
+
+/*subpaginas del tecnico*/
+
+/*boton de ver mas*/
+.esp-tecnico-informacion {
+
+  background-color: #0f4fbe;
+  width: 80%;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 15px;
+
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  height: 60%;
+ 
+}
+
+.item_img {
+
+  width: 100%;
+  height: 211px;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+}
+
+.item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.item_text h4 {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.item_text p {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+/*color del fondo*/
+
+.infor {
+  width: 100%;
+  min-height: 110vh;
+  background-color: #252323;
+  padding: 30px;
+}
+
+/*estilo de texto titulo(por defecto esta informacion sobre bachilleratos)*/
+
+.esp_infor {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  display: inline;
+  margin-left: 100px;
+  color: #ff8a80;
+  letter-spacing: 2px;
+}
+
+.esp_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/*texto arriba de ver mas-todos comparten el mismo diseño*/
+
+.item_text h4 {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/*subpaginas del humanistico*/
+
+/*boton de ver mas*/
+.esp-humanistico-informacion {
+
+  background-color: #0f4fbe;
+  width: 80%;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 15px;
+
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  height: 60%;
+}
+
+/*eventos subpagina info*/
+
+.eventos-informacion{
+
+  background-color: #392c2c;
+  width: 80%;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 15px;
+
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  height: 60%;
+
+}
+
+.infor {
+  width: 100%;
+  min-height: 110vh;
+  background-color: #252323;
+  padding: 30px;
+}
+
+.esp_infor {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  display: inline;
+  margin-left: 100px;
+  color: #ff8a80;
+  letter-spacing: 2px;
+}
+
+.esp_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
